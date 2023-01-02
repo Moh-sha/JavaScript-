@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubble</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>List</h1>
+
+      <ul id="ul_id">
+        <li class="first">sakdsa</li>
+        <li class="first">cascvas</li>
+        <li class="first">wfafsas</li>
+        <li class="first">asfawf</li>
+
+        <button id="add">Add</button>
+      </ul>
+    </div>
+
+    <script>
+      var cont = document.getElementsByClassName("first");
+      for (var i = 0; i < cont.length; i++) {
+        var element = cont[i];
+        element.addEventListener("click", function (event) {
+          event.target.parentNode.removeChild(event.target);
+        });
+      }
+
+      document
+        .getElementById("add")
+        .addEventListener("click", function (event) {
+          var parent = document.getElementById("ul_id");
+
+          var newNode = document.createElement("li");
+          newNode.innerText = "shafin";
+          parent.appendChild(newNode);
+        });
+    </script>
+  </body>
+</html>

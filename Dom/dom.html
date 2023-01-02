@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      article {
+        border: 1px solid black;
+        border-radius: 20px;
+
+        padding: 5px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <h3>author-1</h3>
+      <p class="author">author-1</p>
+      <p class="deciption">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+        consequatur, rem doloribus quo excepturi dignissimos natus. Laboriosam
+        quasi, facere aperiam provident aliquam inventore odio sed ipsam ipsa
+        ipsum vitae sint!
+      </p>
+    </article>
+    <article>
+      <h3>author-2</h3>
+      <p class="author">author-2</p>
+      <p class="deciption">
+        Eum corrupti incidunt vero ducimus dolores labore atque eligendi sit,
+        consectetur saepe architecto qui dolorem molestiae, velit doloribus
+        distinctio beatae doloremque, obcaecati reprehenderit earum natus. Unde
+        velit consequatur incidunt itaque.
+      </p>
+    </article>
+    <article>
+      <h3>author-3</h3>
+      <p class="author">author-3</p>
+      <p class="deciption">
+        Tenetur voluptates quos vel commodi, officia quod itaque sit alias,
+        aperiam architecto, quia sunt molestiae non tempore quibusdam
+        reiciendis. Illo ad nihil sint quis aut accusantium delectus. Veniam,
+        asperiores voluptate!
+      </p>
+    </article>
+
+    <script>
+      var articles = document.getElementsByClassName("author ");
+
+      for (var i = 0; i < articles.length; i++) {
+        var element = articles[i];
+        console.log(element);
+        console.log(element.innerHTML);
+        element.innerHTML = "lekhok -" + i;
+        element.style.backgroundColor = "lightblue";
+      }
+    </script>
+  </body>
+</html>
